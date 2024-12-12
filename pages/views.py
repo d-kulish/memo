@@ -1,20 +1,22 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView  # new
 
+def learn(request):
+    return render(request, 'learn.html')
 
-def home_page_view(request):
-    context = {
-        "inventory_list": ["Widget 1", "Widget 2", "Widget 3"],
-        "greeting": "THAnk you FOR visitING.",
-    }
-    return render(request, "home.html", context)
+def create(request):
+    return render(request, 'create.html')
 
+def stats(request):
+    return render(request, 'stats.html')
 
-class AboutPageView(TemplateView):  
-    template_name = "about.html"
+def about(request):
+    return render(request, 'about.html')
 
-    def get_context_data(self, **kwargs):  # new
-        context = super().get_context_data(**kwargs)
-        context["contact_address"] = "123 Main Street"
-        context["phone_number"] = "555-555-5555"
-        return context
+def profile(request):
+    return render(request, 'profile.html')
+
+def settings(request):
+    return render(request, 'settings.html')
+
+def payments(request):
+    return render(request, 'payments.html')

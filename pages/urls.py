@@ -1,8 +1,13 @@
 from django.urls import path
-
-from .views import home_page_view, AboutPageView  # new
+from . import views
 
 urlpatterns = [
-    path("about/", AboutPageView.as_view(), name="about"),  # new  
-    path("", home_page_view, name="home"),  # new
+    path('', views.learn, name='learn'),  # Add this line for root URL
+    path('learn/', views.learn, name='learn'),
+    path('create/', views.create, name='create'),
+    path('stats/', views.stats, name='stats'),
+    path('about/', views.about, name='about'),
+    path('account/profile/', views.profile, name='profile'),
+    path('account/settings/', views.settings, name='settings'),
+    path('account/payments/', views.payments, name='payments'),
 ]
