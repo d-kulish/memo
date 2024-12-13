@@ -123,10 +123,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# List of directories where Django will look for static files
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Assuming 'static' is in your project root
-]
-
-# Directory where static files will be collected during deployment
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'

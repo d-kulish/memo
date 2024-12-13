@@ -97,7 +97,6 @@
             font-weight: bold;
         } 
 
-            
         .account-dropdown {
             position: absolute;
             right: 20px;
@@ -154,15 +153,13 @@
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
         }
-
     </style>
 </head>
 <body>
     <div class="page-container">
         <header>
             <img src="{% static 'images/logo_example.jpg' %}" alt="Logo" class="logo">
-
-                        <!-- Settings Dropdown -->
+            <!-- Settings Dropdown -->
             <div class="account-dropdown">
                 <button class="account-btn">Account</button>
                 <div class="dropdown-content">
@@ -171,7 +168,6 @@
                     <a href="{% url 'payments' %}">Payments</a>
                 </div>
             </div>
-
             <div class="nav-links">
                 <a href="{% url 'learn' %}" class="{% if request.resolver_match.url_name == 'learn' %}active{% endif %}">Learn</a>
                 <a href="{% url 'create' %}" class="{% if request.resolver_match.url_name == 'create' %}active{% endif %}">Create</a>

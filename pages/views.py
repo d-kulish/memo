@@ -20,3 +20,6 @@ def settings(request):
 
 def payments(request):
     return render(request, 'payments.html')
+
+def home(request):
+    return render(request, 'home.html')
